@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Computer Accessories Shop</title>
+        <link rel="stylesheet" href="tiqah_style.css"> 
+    </head>
+
+    <body onload="myFunction()">
+
+        <header>
+            <h1 style="text-align: center;">MY COMPUTER ACCESSORIES SHOP</h1>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="form.html">Contact Us</a></li>
+                </ul>
+        </header>
+
+        <div class="banner">
+            <h2>YOUR ONE STOP FOR ALL COMPUTER ACCESSORIES!!</h2>
+            <img src="banner.jpg">
+        </div>
+
+        <div class="video">
+            <h1>Video</h1>
+            <video width="450" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="audio">
+            <h1>Audio</h1>
+            <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+        </div>
+
+        <div id="home">
+            <h1>Welcome to My computer Accessories Shop</h1>
+                    <p>We're thrilled to have you here! Whether you're upgrading your setup, looking for the latest gadgets,
+                    <br><br>
+                    or just exploring, we've got everything you need for your tech journey.
+                    <br><br>
+                    Feel free to browse our wide range of high-quality accessories,
+                    <br><br> 
+                    and if you have any questions, our team is always here to help.
+                    <br><br> 
+                    Thank you for choosing us to enhance your digital experience happy shopping!</p>
+                    <br>
+        </div>
+
+        <h2>Our Products</h2>
+
+        <table>
+                <tr>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+                
+                <tr>
+                    <td><img src="CPU.jpg"></td>
+                    <td>CPU</td>
+                    <td>RM250.00</td>
+                    <td>
+                        <a href="#" class="btn alert-btn" data-product="CPU">Buy Now</a>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="laptop.jpg"></td>
+                    <td>HP Laptop</td>
+                    <td>RM2540.00</td>
+                    <td>
+                        <a href="#" class="btn alert-btn" data-product="laptop">Buy Now</a>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="monitor.jpg"></td>
+                    <td>Gaming Monitor</td>
+                    <td>RM382.00</td>
+                    <td>
+                        <a href="#" class="btn alert-btn" data-product="monitor">Buy Now</a>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="mouse.jpg"></td>
+                    <td>Wireless Mouse</td>
+                    <td>RM25.00</td>
+                    <td>
+                        <a href="#" class="btn alert-btn" data-product="mouse">Buy Now</a>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="printer.jpg"></td>
+                    <td>Printer</td>
+                    <td>RM250.00</td>
+                    <td>
+                        <a href="#" class="btn alert-btn" data-product="printer">Buy Now</a>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><img src="speakers.jpg"></td>
+                    <td>Speakers</td>
+                    <td>RM170.00</td>
+                    <td>
+                        <a href="#" class="btn alert-btn" data-product="Speakers">Buy Now</a>
+                    </td>
+                </tr>
+        </table>
+
+    <script>
+
+        const buttons = document.querySelectorAll('.alert-btn');
+
+        buttons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault(); 
+            const productName = this.getAttribute('data-product'); 
+            alert(`You selected: ${productName}`); 
+        });
+        });
+
+        function myFunction() {
+                alert("Page is loaded");
+            }
+        </script>
+    </body>
+</html>

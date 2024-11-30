@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="form.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <section id="product-bundles">
+        <h2>Special Bundles</h2>
+        <div class="bundle-grid">
+          
+          <div class="bundle-card">
+            <img src="office-setup.jpg" alt="Office Setup Kit">
+            <h3>Office Setup Kit</h3>
+            <p>Includes: Monitor, Keyboard, Mouse</p>
+            <p class="price">Price: RM950.00</p>
+            <a href="#" class="btn alert-btn" data-product="office-setup">Buy Now</a>
+          </div>
+          
+          <div class="bundle-card">
+            <img src="gaming-starter.jpg" alt="Gaming Starter Pack">
+            <h3>Gaming Starter Pack</h3>
+            <p>Includes: Gaming Headset, RGB Keyboard, Gaming Mouse</p>
+            <p class="price">Price: RM700.00</p>
+            <a href="#" class="btn alert-btn" data-product="gaming-starter">Buy Now</a>
+          </div>
+
+          <div class="bundle-card">
+            <img src="gaming-chair.jpg" alt="Gaming Chair">
+            <h3>Gaming Chair</h3>
+            <p class="price">Price: RM390.00</p>
+            <a href="#" class="btn alert-btn" data-product="gaming-chair">Buy Now</a>
+          </div>
+
+        </div>
+      </section>
+
+      <style>
+        body {
+            background-color: beige;
+        }
+
+        #product-bundles {
+            text-align: center;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            }
+
+        .bundle-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            }
+
+        .bundle-card {
+            background: #decfa6;
+            border: 1px solid #C49A87;
+            border-radius: 10px;
+            width: 300px;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            }
+
+        .bundle-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            }
+
+        .bundle-card h3 {
+            color: #5A3E2B;
+            margin-bottom: 10px;
+            }
+
+        .bundle-card .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #8B5E3C;
+            margin: 10px 0;
+            }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            }
+
+        header ul li {
+            display: inline;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        header ul li a:hover {
+            background-color: #decfa6; 
+            color: #4a3f35; 
+        }
+      </style>
+
+      <script>
+        const buttons = document.querySelectorAll('.alert-btn');
+            buttons.forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); 
+            const productName = this.getAttribute('data-product'); 
+                alert(`You selected: ${productName}`); 
+        });
+        });
+      </script>
+      
+</html>
